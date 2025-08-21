@@ -8,13 +8,15 @@ function App() {
     const setColorRed = () => {
         setColor('red');
     }
+
+    const setColorGreen = () => {
+        setColor('green');
+    }
+
     const setColorBlue = () => {
         // BUG: we forgot to specify 'blue' here and
         //      are now passing an empty value.
         setColor();
-    }
-    const setColorGreen = () => {
-        setColor('green');
     }
 
     return (
@@ -25,11 +27,11 @@ function App() {
             <button onClick={setColorRed}>
                 Red
             </button>
-            <button onClick={setColorBlue}>
-                Blue
-            </button>
             <button onClick={setColorGreen}>
                 Green
+            </button>
+            <button onClick={setColorBlue}>
+                Blue
             </button>
         </>
     )
