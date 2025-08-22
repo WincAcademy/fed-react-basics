@@ -7,3 +7,12 @@ body {
     text-align: center;
     justify-content: center;
 }
+
+button {
+    border: 1px solid gray;
+}
+
+.button-container {
+    display: inline-flex;
+    gap: 1rem;
+}

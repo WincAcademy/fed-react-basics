@@ -11,12 +11,14 @@ export const App = () => {
             <h1>Winc Weather App</h1>
             { weather && <WeatherIcon weather={weather} /> }
             
-            <button onClick={() => setWeather(sunnyWeather)}>
-                Sunny
-            </button>
-            <button onClick={() => setWeather(cloudyWeather)}>
-                Cloudy
-            </button>
+            <div className='button-container'>
+                <button onClick={() => setWeather(sunnyWeather)}>
+                    Sunny
+                </button>
+                <button onClick={() => setWeather(cloudyWeather)}>
+                    Cloudy
+                </button>
+            </div>
         </>
     )
 }
