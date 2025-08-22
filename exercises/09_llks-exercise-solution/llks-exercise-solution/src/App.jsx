@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 export const App = () => {
     const [weather, setWeather] = useState(sunnyWeather);
-    const weatherTypes = [
+    const weatherObjects = [
         sunnyWeather,
         cloudyWeather,
         rainyWeather
@@ -21,12 +21,12 @@ export const App = () => {
             { weather && <WeatherIcon weather={weather} /> }
             
             <div className='button-container'>
-                {weatherTypes.map((type) => (
-                    <button 
-                        key={type.weatherType} 
-                        onClick={() => setWeather(type)}
+                {weatherObjects.map((weatherObject) => (
+                    <button
+                        key={weatherObject.weatherType} 
+                        onClick={() => setWeather(weatherObject)}
                     >
-                        {type.weatherType}
+                        {weatherObject.weatherType}
                     </button>
                 ))}
             </div>

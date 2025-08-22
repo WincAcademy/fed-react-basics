@@ -1,5 +1,5 @@
 <div className='button-container'>
-    {weatherTypes.map((type) => (
+    {weatherObjects.map((weatherObject) => (
         <button>
         </button>
     ))}

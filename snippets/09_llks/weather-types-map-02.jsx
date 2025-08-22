@@ -1,9 +1,9 @@
 <div className='button-container'>
-    {weatherTypes.map((type) => (
+    {weatherObjects.map((weatherObject) => (
         <button
-            onClick={() => setWeather(type)}
+            onClick={() => setWeather(weatherObject)}
         >
-            {type.weatherType}
+            {weatherObject.weatherType}
         </button>
     ))}
 </div>

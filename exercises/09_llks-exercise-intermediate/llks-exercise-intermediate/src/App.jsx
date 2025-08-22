@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 export const App = () => {
     const [weather, setWeather] = useState(sunnyWeather);
-    const weatherTypes = [
+    const weatherObjects = [
         sunnyWeather,
         cloudyWeather,
         rainyWeather
