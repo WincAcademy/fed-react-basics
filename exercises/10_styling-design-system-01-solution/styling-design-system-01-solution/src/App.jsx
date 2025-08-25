@@ -28,12 +28,13 @@ export const App = () => {
                     size="xl"
                     color="blue.200"
                     textAlign="center"
+                    fontStyle="italic"
                 >
                     Winc Weather App
                 </Heading>
                 { weather && <WeatherIcon weather={weather} /> }
-                
-                <Group justify="center" spacing={4}>
+
+                <Group>
                     {weatherObjects.map((weatherObject) => (
                         <Button
                             key={weatherObject.weatherType} 
