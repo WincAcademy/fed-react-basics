@@ -4,7 +4,6 @@ export const WeatherIcon = ({ weather }) => {
     return (
         <Stack align="center" spacing={4}>
             <Image
-                className="weather-icon"
                 src={weather.imageSrc}
                 alt={weather.imageAlt}
                 w={200}
