@@ -26,7 +26,7 @@ export const ResponsiveButton = ({ children }) => {
         return () => ro.disconnect();
     }, []);
 
-    const bg    = (width < TOO_SMALL_WIDTH || width > TOO_LARGE_WIDTH) ? "red.500" : "white";
+    const bg    = (width < TOO_SMALL_WIDTH || width > TOO_LARGE_WIDTH) ? "red.500" : "green.400";
     const color = (width < TOO_SMALL_WIDTH || width > TOO_LARGE_WIDTH) ? "white"   : "black";
 
     return (

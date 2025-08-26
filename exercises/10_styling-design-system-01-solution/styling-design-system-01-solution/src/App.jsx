@@ -25,8 +25,8 @@ export const App = () => {
         <Center height="100vh">
             <Stack>
                 <Heading
-                    size="xl"
-                    color="blue.200"
+                    size="2xl"
+                    color="blue.400"
                     textAlign="center"
                     fontStyle="italic"
                 >
