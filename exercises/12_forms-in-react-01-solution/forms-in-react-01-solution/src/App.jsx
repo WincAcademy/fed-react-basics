@@ -9,8 +9,8 @@ export function App() {
         setNotes([...notes, note]);
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
         addNote(inputValue);
         setInputValue("");
     };
