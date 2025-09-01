@@ -1,23 +1,15 @@
-import { Component } from 'react';
- 
-export class Toggle extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { isToggleOn: true };
-        this.handleClick = this.handleClick.bind(this);
+import { useState } from 'react';
+
+export const Toggle = () => {
+    const [isToggleOn, setIsToggleOn] = useState(true);
+
+    const handleClick = () => {
+        setIsToggleOn(!isToggleOn);
     }
 
-    handleClick() {
-        this.setState((prevState) => ({
-            isToggleOn: !prevState.isToggleOn,
-        }));
-    }
-
-    render() {
-        return (
-            <button onClick={this.handleClick}>
-                {this.state.isToggleOn ? 'ON' : 'OFF'}
-            </button>
-        );
-    }
+    return (
+        <button onClick={handleClick}>
+            {isToggleOn ? 'ON' : 'OFF'}
+        </button>
+    );
 }
