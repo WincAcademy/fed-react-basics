@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from "react";
 
 export function App() {
-    const [notes, setNotes] = useState(["test", "note"]);
+    const [notes, setNotes] = useState([]);
     const [inputValue, setInputValue] = useState("");
 
     const addNote = (note) => {
