@@ -1,0 +1,20 @@
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.notes-container p {
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 4px 0;
+}
+
+form {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
