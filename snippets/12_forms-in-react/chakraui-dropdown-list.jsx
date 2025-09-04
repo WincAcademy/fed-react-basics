@@ -1,6 +1,11 @@
+const [selected, setSelected] = React.useState("");
+
 <Field.Root>
     <Field.Label>Favorite fruit</Field.Label>
-    <NativeSelect defaultValue="">
+    <NativeSelect
+        value={selected}
+        onChange={(e) => setSelected(e.target.value)}
+    >
         <option value="" disabled>
             Select a fruit
         </option>
