@@ -24,9 +24,9 @@ export const App = () => {
 
     const changeWeather = (e) => {
         e.preventDefault();
-        const selectedIndex = e.target.elements['weather-select'].value;
-        setWeather(weatherObjects[selectedIndex]);
-    }
+        const weatherIndex = e.target.elements['weather-select'].value;
+        setWeather(weatherObjects[weatherIndex]);
+    };
 
     return (
         <Center height="100vh">
@@ -53,9 +53,12 @@ export const App = () => {
                                 Select a weather type
                             </option>
                             
-                            {weatherObjects.map((weather, index) => (
-                                <option key={index} value={index}>
-                                    {weather.weatherType}
+                            {weatherObjects.map((weatherObject, index) => (
+                                <option
+                                    key={index}
+                                    value={index}
+                                >
+                                    {weatherObject.weatherType}
                                 </option>
                             ))}
                         </NativeSelect.Field>

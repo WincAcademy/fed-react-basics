@@ -14,12 +14,17 @@ import {
 } from '@chakra-ui/react'
 
 export const App = () => {
-    const [weatherId, setWeatherId] = useState(0);
+    const [weather, setWeather] = useState(sunnyWeather);
     const weatherObjects = [
         sunnyWeather,
         cloudyWeather,
         rainyWeather
     ];
+
+    const changeWeather = (e) => {
+        const weatherIndex = e.target.value;
+        setWeather(weatherObjects[weatherIndex]);
+    };
 
     return (
         <Center height="100vh">
@@ -32,7 +37,7 @@ export const App = () => {
                 >
                     Winc Weather App
                 </Heading>
-                <WeatherIcon weather={weatherObjects[weatherId]} />
+                { weather && <WeatherIcon weather={weather} /> }
 
                 <form>
                 <Field.Root>
@@ -40,18 +45,21 @@ export const App = () => {
                         Weather Type
                     </Field.Label>
 
-                    <NativeSelect.Root
-                        value={weatherId}
-                        onChange={(e) => setWeatherId(e.target.value)}
-                    >
-                        <NativeSelect.Field>
-                            <option value="" disabled>
+                    <NativeSelect.Root>
+                        <NativeSelect.Field
+                            value={weatherObjects.indexOf(weather)}
+                            onChange={changeWeather}
+                        >
+                            <option disabled>
                                 Select a weather type
                             </option>
                             
-                            {weatherObjects.map((weather, index) => (
-                                <option key={index} value={index}>
-                                    {weather.weatherType}
+                            {weatherObjects.map((weatherObject, index) => (
+                                <option
+                                    key={index}
+                                    value={index}
+                                >
+                                    {weatherObject.weatherType}
                                 </option>
                             ))}
                         </NativeSelect.Field>
