@@ -21,8 +21,8 @@ export const App = () => {
         rainyWeather
     ];
 
-    const changeWeather = (e) => {
-        const weatherIndex = e.target.value;
+    const changeWeather = (event) => {
+        const weatherIndex = event.target.value;
         setWeather(weatherObjects[weatherIndex]);
     };
 

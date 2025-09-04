@@ -22,9 +22,9 @@ export const App = () => {
         rainyWeather
     ];
 
-    const changeWeather = (e) => {
-        e.preventDefault();
-        const weatherIndex = e.target.elements['weather-select'].value;
+    const changeWeather = (event) => {
+        event.preventDefault();
+        const weatherIndex = event.target.elements['weather-select'].value;
         setWeather(weatherObjects[weatherIndex]);
     };
 
