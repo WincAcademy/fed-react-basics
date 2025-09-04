@@ -3,7 +3,7 @@ const [checked, setChecked] = React.useState(true);
 <Field.Root>
     <Checkbox.Root
         checked={checked}
-        onCheckedChange={(e) => setChecked(!!e.checked)}
+        onCheckedChange={(e) => setChecked(!e.checked)}
     >
         <Checkbox.HiddenInput />
         <Checkbox.Control />
