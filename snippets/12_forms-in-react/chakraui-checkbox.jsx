@@ -1,10 +1,14 @@
 const [checked, setChecked] = React.useState(true);
 
 <Field.Root>
-    <Checkbox
-        isChecked={checked}
-        onChange={(e) => setChecked(e.target.checked)}
+    <Checkbox.Root
+        checked={checked}
+        onCheckedChange={(e) => setChecked(!!e.checked)}
     >
-        I agree to the terms and conditions
-    </Checkbox>
+        <Checkbox.HiddenInput />
+        <Checkbox.Control />
+        <Checkbox.Label>
+            Accept terms and conditions
+        </Checkbox.Label>
+    </Checkbox.Root>
 </Field.Root>
