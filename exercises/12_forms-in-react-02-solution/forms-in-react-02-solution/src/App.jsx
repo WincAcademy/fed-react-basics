@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 
 export const App = () => {
-    const [weather, setWeather] = useState(sunnyWeather);
+    const [weatherId, setWeatherId] = useState(0);
     const weatherObjects = [
         sunnyWeather,
         cloudyWeather,
@@ -33,34 +33,33 @@ export const App = () => {
                 >
                     Winc Weather App
                 </Heading>
-                { weather && <WeatherIcon weather={weather} /> }
+                <WeatherIcon weather={weatherObjects[weatherId]} />
 
+                <form>
                 <Field.Root>
                     <Field.Label>
                         Weather Type
                     </Field.Label>
-                    
+
                     <NativeSelect.Root
-                        onChange={
-                            (e) => setWeather(
-                                weatherObjects[e.target.value]
-                            )
-                        }
+                        value={weatherId}
+                        onChange={(e) => setWeatherId(e.target.value)}
                     >
                         <NativeSelect.Field>
-                            {weatherObjects.map((weatherObj, index) => (
-                                <option
-                                    key={index}
-                                    value={index}
-                                >
-                                    {weatherObj.weatherType}
+                            <option value="" disabled>
+                                Select a weather type
+                            </option>
+                            
+                            {weatherObjects.map((weather, index) => (
+                                <option key={index} value={index}>
+                                    {weather.weatherType}
                                 </option>
                             ))}
                         </NativeSelect.Field>
-
-                        <NativeSelect.Indicator />
+                        <NativeSelect.Indicator/>
                     </NativeSelect.Root>
                 </Field.Root>
+                </form>
             </Stack>
         </Center>
     )
