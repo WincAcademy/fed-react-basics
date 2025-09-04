@@ -7,7 +7,7 @@ const [selected, setSelected] = React.useState("");
         onChange={(e) => setSelected(e.target.value)}
     >
         <NativeSelect.Field>
-            <option value="" disabled>
+            <option disabled>
                 Select a fruit
             </option>
             <option value="apple">Apple</option>

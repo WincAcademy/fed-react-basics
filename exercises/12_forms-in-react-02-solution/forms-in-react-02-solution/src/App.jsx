@@ -10,8 +10,7 @@ import {
     Center,
     Stack,
     Field,
-    NativeSelect,
-    Input
+    NativeSelect
 } from '@chakra-ui/react'
 
 export const App = () => {
