@@ -14,9 +14,7 @@ function App() {
     }
 
     const setColorBlue = () => {
-        // BUG: we forgot to specify 'blue' here and
-        //      are now passing an empty value.
-        setColor('blue');
+        setColor();
     }
 
     return (
