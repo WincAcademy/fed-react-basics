@@ -5,6 +5,7 @@ export const Market = () => {
     // Let's change the product value directly
     // after two seconds have passed
     setTimeout(() => {
+        console.log('We are now selling bananas!');
         product = 'bananas';
     }, 2000);
 
