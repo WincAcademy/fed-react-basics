@@ -7,7 +7,7 @@ export const ControlledInputForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`You entered: ${inputValue}`);
+        console.log(`You entered: ${inputValue}`);
     };
 
     return (
