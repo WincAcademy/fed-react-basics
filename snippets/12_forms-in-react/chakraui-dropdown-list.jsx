@@ -1,4 +1,4 @@
-const [selected, setSelected] = React.useState("");
+const [selected, setSelected] = useState("");
 
 <Field.Root>
     <Field.Label>Favorite fruit</Field.Label>

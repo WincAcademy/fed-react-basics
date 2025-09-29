@@ -1,4 +1,4 @@
-const [checked, setChecked] = React.useState(true);
+const [checked, setChecked] = useState(true);
 
 <Field.Root>
     <Checkbox.Root
