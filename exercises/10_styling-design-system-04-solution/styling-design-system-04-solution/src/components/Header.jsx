@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, HStack, Button, Spacer, Container } from '@chakra-ui/react';
-import { ColorModeToggle } from './ui/ColorModeToggle'
+import { ColorModeToggle } from './ColorModeToggle'
 
 export const Header = () => {
     return (
