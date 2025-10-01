@@ -1,6 +1,7 @@
 <div className='button-container'>
     {weatherObjects.map((weatherObject) => (
-        <button>
+        <button key={weatherObject.weatherType}>
+            {weatherObject.weatherType}
         </button>
     ))}
 </div>

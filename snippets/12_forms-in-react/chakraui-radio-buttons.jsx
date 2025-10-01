@@ -1,4 +1,4 @@
-const [value, setValue] = React.useState("email");
+const [value, setValue] = useState("email");
 
 <Field.Root>
     <Field.Label>Preferred contact method</Field.Label>

@@ -1,4 +1,5 @@
-const [email, setEmail] = React.useState('');
+const [email, setEmail] = useState('');
+const [errors, setErrors] = useState({});
 
 <Field.Root invalid={errors.email}>
     <Field.Label>Email</Field.Label>
