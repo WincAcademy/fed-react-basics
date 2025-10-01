@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useState } from 'react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { useTheme } from 'next-themes'
